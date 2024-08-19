@@ -122,7 +122,7 @@ export const DeleteAccount = () => {
                 <div className="errorContainer">
                   {/* Error Message */}
                   {errors.phone && (
-                    <p style={{ color: "red" }}>{errors.phone}</p>
+                    <p className="errorMessage" style={{ color: "red" }}>{errors.phone}</p>
                   )}
                   {/* Next Button  */}
                   <button
@@ -137,7 +137,7 @@ export const DeleteAccount = () => {
                 <div className="errorContainer">
                   {/* Error Message */}
                   {errors.password && (
-                    <p style={{ color: "red" }}>{errors.password}</p>
+                    <p className="errorMessage" style={{ color: "red" }}>{errors.password}</p>
                   )}
                   {/* Delete Button */}
                   <button
