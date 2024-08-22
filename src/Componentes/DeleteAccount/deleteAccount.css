@@ -76,12 +76,11 @@ body {
   color: var(--main-color);
 }
 
-.inputs {
+form {
   display: flex;
   flex-direction: row;
   margin-top: 55px;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
+  gap: 90px;
   transition: transform 0.5s ease, height 0.2s ease;
   overflow: hidden;
 }
@@ -130,7 +129,7 @@ input[type="number"] {
   align-items: center;
   margin: 20px 55px;
   width: 80%;
-  height: 60px;
+  height: 45px;
   background-color: #fff;
   border-radius: 6px;
   transition: 0.2s;
@@ -147,7 +146,7 @@ input[type="number"] {
   color: var(--main-color);
   text-decoration: underline;
 }
-.errorContainer{
+.errorContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -160,20 +159,33 @@ input[type="number"] {
   justify-content: center;
   flex-direction: column;
 }
-.submit-container {
+.button-container {
   overflow: hidden;
   display: flex;
   align-items: center;
-  margin: 20px 55px;
-  max-width: 80%;
-  height: 60px;
+  margin: 5%;
+  max-width: fit-content;
   background-color: #fff;
   border-radius: 6px;
   transition: 0.2s;
   border: transparent solid 1px;
   justify-content: center;
-  height: 90px;
+  height: 60px;
 }
+.pop_up_1 .button-container {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  max-width: fit-content;
+  background-color: #fff;
+  border-radius: 6px;
+  transition: 0.2s;
+  border: transparent solid 1px;
+  justify-content: center;
+  height: 60px;
+  margin-top: 15px;
+}
+
 .submit img {
   width: 22px;
   transform: translate(202px, 5px);
@@ -184,8 +196,15 @@ input[type="number"] {
   transform: translate(4px, 5px);
   width: 24px;
 }
+.errorMessage {
+  color: red;
+  display: flex;
+  top: 10px;
+  position: relative;
+  transition: 0.3s;
+}
 
-.submit-container .submit img::selection {
+.button-container .submit img::selection {
   transform: translate(4px, 5px);
 }
 
@@ -207,8 +226,6 @@ input[type="number"] {
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-top: 45px;
 }
 .buttons .button.delete:hover {
   color: #d96e6e;
@@ -237,7 +254,6 @@ input[type="number"] {
   z-index: 99999;
   background-color: #fff;
   padding: 60px;
-  margin: 0;
   position: absolute;
   width: auto;
   height: 50%;
@@ -248,12 +264,11 @@ input[type="number"] {
   font-size: 25px;
 }
 
-
-.pop_up_1 .container .accept{
+.pop_up_1 .container .accept {
   position: absolute;
   transform: translateY(-20%);
 }
-.pop_up_1 .container .accept img{
+.pop_up_1 .container .accept img {
   position: relative;
   top: 15px;
   left: 10px;
@@ -287,12 +302,17 @@ input[type="number"] {
     top: 140px;
   }
   .input {
-    transform: translatex(113%);
+    transform: translatex(118%);
   }
   .button {
-    width: 330px;
+    width: 305px;
   }
-  .errorMessage{
+  .errorMessage {
     font-size: 10px;
+  }
+  .button.confarm.delete {
+    color: #d96e6e;
+    font-weight: 700;
+    background-color: #d96e6e5d;
   }
 }

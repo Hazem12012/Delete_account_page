@@ -1,10 +1,13 @@
 import accept_icon from "../Assets/icons8-accept-48.png";
-export default function Pop_up({
-  back_delete,
-  setBack_Delete,
-  validate,
-  deleteAccount,
-}) {
+import { useState } from "react";
+import Button from "./Button";
+
+export default function Pop_up({ back_delete, setBack_Delete }) {
+  const [validate, setValidate] = useState(false);
+  function deleteAccount() {
+    setValidate(true);
+  }
+
   if (validate === true) {
     return (
       <div className="pop_up_1">
@@ -35,22 +38,21 @@ export default function Pop_up({
             <h3>هل انت متاكد من حذف الحساب</h3>
           </div>
           <div className={"buttons"}>
-            <input
-              type="submit"
-              value={"تأكيد"}
-              className="button delete"
-              onClick={() => {
+            <Button
+              className={"confarm delete "}
+              clickEvent={() => {
                 deleteAccount();
               }}
-            />
-            <button
-              className="button"
-              onClick={() => {
+            >
+              تأكيد
+            </Button>
+            <Button
+              clickEvent={() => {
                 setBack_Delete(false);
               }}
             >
               إلغاء
-            </button>
+            </Button>
           </div>
         </div>
       </div>

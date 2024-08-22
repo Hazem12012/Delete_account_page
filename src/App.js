@@ -1,11 +1,9 @@
-
-import { DeleteAccount } from "./Componentes/DeleteAccount/DeleteAccount";
-
-
+import DeleteAccount from "./Componentes/DeleteAccount/DeleteAccount";
+import'./Componentes/DeleteAccount/deleteAccount.css';
 function App() {
   return (
     <div>
-      <DeleteAccount/>
+      <DeleteAccount />
     </div>
   );
 }
